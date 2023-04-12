@@ -8,3 +8,8 @@
 运行npm run packager编译windows可执行程序。
 
 ![](screenshots.jpg)
+
+
+### 注意
+
+截止2023/4/12，只能使用npm或yarn安装依赖

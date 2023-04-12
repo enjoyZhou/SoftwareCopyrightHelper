@@ -4,13 +4,25 @@
   "description": "软件著作权助手，用于帮助程序员申请软件著作权统计代码相关的信息。",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "packager": "electron-packager ./ 软件著作权助手 --platform=win32 --arch=x64 --out=./dist --overwrite"
+    "start": "electron-forge start",
+    "build": "electron-forge package",
+    "packager": "electron-packager ./ 软件著作权助手 --platform=win32 --arch=x64 --out=./dist --overwrite",
+    "packager-mac": "electron-packager ./ 软件著作权助手 --platform=darwin --arch=x64 --out=./dist --overwrite",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "author": "wq",
   "license": "ISC",
   "devDependencies": {
+    "@electron-forge/cli": "^6.1.1",
+    "@electron-forge/maker-deb": "^6.1.1",
+    "@electron-forge/maker-rpm": "^6.1.1",
+    "@electron-forge/maker-squirrel": "^6.1.1",
+    "@electron-forge/maker-zip": "^6.1.1",
     "electron": "^11.3.0",
-    "electron-packager": "^15.2.0"
+    "electron-devtools-installer": "^3.2.0"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
   }
 }
